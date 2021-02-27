@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <title>影视详情</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!-- //for-mobile-apps -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/medile.css" rel="stylesheet" type="text/css"/>
+    <link href="css/single.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/contactstyle.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/faqstyle.css" type="text/css" media="all"/>
+    <!-- //news-css -->
+    <!-- list-css -->
+    <link rel="stylesheet" href="list-css/list.css" type="text/css" media="all"/>
+    <!-- //list-css -->
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <!-- //font-awesome icons -->
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+                items: 5,
+                itemsDesktop: [640, 5],
+                itemsDesktopSmall: [414, 4]
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="moviesDetail">
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="w3layouts_logo">
+                <a href="/"><h1>黑马<span>影视</span></h1></a>
+            </div>
+            <div class="w3l_sign_in_register">
+                <ul>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> 400-618-9090</li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">登录</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- //header -->
+    <!-- bootstrap-pop-up 这里是登录的窗口-->
+    <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    登录 & 注册
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <section>
+                    <div class="modal-body">
+                        <div class="w3_login_module">
+                            <div class="module form-module">
+                                <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+                                    <div class="tooltip">点我</div>
+                                </div>
+                                <div class="form">
+                                    <h3>账户登录</h3>
+                                    <form action="#" method="post">
+                                        <input type="text" placeholder="用户名" required="">
+                                        <input type="password" placeholder="密码" required="">
+                                        <input type="button" value="登录">
+                                    </form>
+                                </div>
+                                <div class="form">
+                                    <h3>注册账户</h3>
+                                    <form action="#" method="post">
+                                        <input type="text" name="Username" placeholder="用户名" required="">
+                                        <input type="password" name="Password" placeholder="密码" required="">
+                                        <input type="email" name="Email" placeholder="邮箱" required="">
+                                        <input type="text" name="Phone" placeholder="手机号" required="">
+                                        <input type="submit" value="注册">
+                                    </form>
+                                </div>
+                                <div class="cta"><a href="#">忘记密码?</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- //bootstrap-pop-up -->
+    <!-- nav 这个不用展开 -->
+    <div class="movies_nav">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/">首页</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">类型 <b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <li>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="#">动作</a></li>
+                                                <li><a href="#">奇幻</a></li>
+                                                <li><a href="#">犯罪</a></li>
+                                                <li><a href="#">家庭</a></li>
+                                                <li><a href="#">恐怖</a></li>
+                                                <li><a href="#">浪漫</a></li>
+                                                <li><a href="#">体育</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="#">冒险</a></li>
+                                                <li><a href="#">喜剧</a></li>
+                                                <li><a href="#">纪录</a></li>
+                                                <li><a href="#">幻想</a></li>
+                                                <li><a href="#">惊悚</a></li>
+                                                <li><a href="#">战争</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="#">动画</a></li>
+                                                <li><a href="#">戏剧</a></li>
+                                                <li><a href="#">古装</a></li>
+                                                <li><a href="#">历史</a></li>
+                                                <li><a href="#">音乐剧</a></li>
+                                                <li><a href="#">心理学</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="series.html">电视连续剧</a></li>
+                            <li><a href="news.html">最新电影</a></li>
+                            <li><a href="short-codes.html">最热电影</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">国家 <b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <li>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="#">亚洲</a></li>
+                                                <li><a href="#">法国</a></li>
+                                                <li><a href="#">台湾</a></li>
+                                                <li><a href="#">美国</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="#">中国</a></li>
+                                                <li><a href="#">洪聪</a></li>
+                                                <li><a href="#">日本</a></li>
+                                                <li><a href="#">泰国</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="#">欧洲</a></li>
+                                                <li><a href="#">印度</a></li>
+                                                <li><a href="#">韩国</a></li>
+                                                <li><a href="#">英国</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">A-Z 列表</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- //nav -->
+    <!-- single -->
+    <div class="single-page-agile-main">
+        <div class="container">
+            <!-- /w3l-medile-movies-grids -->
+            <div class="agileits-single-top">
+                <ol class="breadcrumb">
+                    <li><a href="/">首页</a></li>
+                    <li class="active">影视详情</li>
+                </ol>
+            </div>
+            <div class="single-page-agile-info">
+                <!-- /movie-browse-agile -->
+                <div class="show-top-grids-w3lagile">
+                    <div class="single-left">
+                        <div class="song">
+                            <!--标题-->
+                            <div class="song-info">
+                                <h3>蜘蛛侠：英雄归来</h3>
+                            </div>
+                            <div class="video-grid-single-page-agileits">
+                                <!--电影图片-->
+                                <div data-video="dLmKio67pVQ" id="video">
+                                    <img src="/images/zhizhuxia.jpg" alt="" class="img-responsive"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div class="all-comments">
+                            <div class="all-comments-info">
+                                <a href="#">评论</a>
+                                <div class="agile-info-wthree-box">
+                                    <form>
+                                        <input type="hidden">
+                                        <textarea placeholder="您的评论" required=""></textarea>
+                                        <input type="button" value="发表">
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="media-grids">
+
+                                <div class="media">
+                                    <h5>迎风尿三丈</h5>
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/user.jpg" title="One movies" alt=" "/>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <p>剧情不错。英雄归来……每个人儿时都会犯错误…能力超凡高于平常人本身自己也会膨胀的。
+                                            总想表现自己，证明自己受到拥护，做事总会欠缺考虑不顾大局。</p>
+                                        <span>2020-10-10</span>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <h5>逆风湿一鞋</h5>
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/user.jpg" title="One movies" alt=" "/>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <p>这是成长，如何运用自己所学到的所得到的能力。
+                                            钢铁侠是成熟的……所以就像父亲管束不是想限制，是为了更好让你做想做的。教育很重要！关系成长方向</p>
+                                        <span>2020-10-10</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/axios-0.18.0.js"></script>
+<script type="text/javascript" src="/js/vuejs-2.5.16.js"></script>
+
+<!--Vue的代码写到这里-->
+<script>
+    const app = new Vue({
+        el: '#moviesDetail',
+        data: {},
+        methods: {}
+    })
+
+</script>
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="w3ls_footer_grid">
+            <div class="col-md-6 w3ls_footer_grid_left">
+                <div class="w3ls_footer_grid_left1">
+                    <h2>订阅我们</h2>
+                    <div class="w3ls_footer_grid_left1_pos">
+                        <form action="#" method="post">
+                            <input type="email" name="email" placeholder="你的邮箱..." required="">
+                            <input type="submit" value="发送">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 w3ls_footer_grid_right">
+                <a href="/index.html"><h2>heima<span>Movies</span></h2></a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="col-md-5 w3ls_footer_grid1_left">
+            <p>Copyright &copy; 2020.传智播客教育股份有限公司版权所有。</p>
+        </div>
+        <div class="col-md-7 w3ls_footer_grid1_right">
+            <ul>
+                <li>
+                    <a href="genres.html">电影</a>
+                </li>
+                <li>
+                    <a href="faq.html">常见问题</a>
+                </li>
+                <li>
+                    <a href="horror.html">动作</a>
+                </li>
+                <li>
+                    <a href="genres.html">冒险</a>
+                </li>
+                <li>
+                    <a href="comedy.html">喜剧</a>
+                </li>
+                <li>
+                    <a href="icons.html">图标</a>
+                </li>
+                <li>
+                    <a href="contact.html">联系我们</a>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- //footer -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".dropdown").hover(
+            function () {
+                $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                $(this).toggleClass('open');
+            },
+            function () {
+                $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                $(this).toggleClass('open');
+            }
+        );
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $().UItoTop({easingType: 'easeOutQuart'});
+    });
+</script>
+<script>
+    $('.toggle').click(function () {
+        // Switches the Icon
+        $(this).children('i').toggleClass('fa-pencil');
+        // Switches the forms
+        $('.form').animate({
+            height: "toggle",
+            'padding-top': 'toggle',
+            'padding-bottom': 'toggle',
+            opacity: "toggle"
+        }, "slow");
+    });
+</script>
+
+</body>
+</html>
