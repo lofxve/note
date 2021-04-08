@@ -953,7 +953,7 @@ ConcurrentHashMap：采用的CAS 机制——乐观锁，效率更高。
 
 线程用于执行异步任务，单个的线程既是工作单元也是执行机制，从JDK1.5开始，为了把工作单元与执行机制分离开，Executor框架诞生了，他是一个用于统一创建与运行的接口。Executor框架实现的就是线程池的功能。
 
-<img src="D:\桌面\笔记\img\Executor.png" style="zoom:75%;" />
+<img src=".\img\Executor.png" style="zoom:75%;" />
 
 ## Executor框架包括三大部分：
 
